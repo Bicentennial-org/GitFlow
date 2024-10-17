@@ -28,4 +28,7 @@ jobs:
     steps:
       - name: Check files
         run: ls
-        
+      - name: Review checkout
+        uses: actions/checkout@v4
+      - name: Then check files
+        run: ls
