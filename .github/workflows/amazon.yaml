@@ -19,8 +19,7 @@ jobs:
       - name: Deploy on LightSail
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@35.159.22.72 << 'EOF'
+          sudo rm -rf /var/www/html/*
           cd /var/www/html
-          sudo rm -rf *
-          git reset --hard 
-          git pull origin master
+          sudo git clone https://github.com/Bicentennial-org/GitFlow.git .
           EOF
