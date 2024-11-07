@@ -20,7 +20,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@3.76.10.150 << 'EOF'
           cd /var/www/html
-          #sudo rm -rf *
+          sudo rm -rf .git
           if [ -d ".git"]; then
             git pull origin master
           else
